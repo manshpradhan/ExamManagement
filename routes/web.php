@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('backend.index');
 });
+
+Route::get('addQuestions','QuestionController@index');
