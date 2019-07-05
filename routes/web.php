@@ -12,7 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('backend.index');
+    return view('index');
 });
 
-Route::get('addQuestions','QuestionController@index');
+// Route::get('addQuestions','QuestionController@index');
+
+Route::get('questions','QuestionController@index');
+Route::get('questions/create','QuestionController@create');

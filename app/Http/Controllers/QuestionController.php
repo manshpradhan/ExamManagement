@@ -14,7 +14,7 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        return view('backend.addQuestions');
+        return view('questions.index');
     }
 
     /**
@@ -24,7 +24,8 @@ class QuestionController extends Controller
      */
     public function create()
     {
-        //
+        $questions =new Question();
+        return view('questions.create',compact('questions'));
     }
 
     /**

@@ -1,4 +1,4 @@
-@extends('backend.index')
+@extends('index')
 
 @section('content')
 
