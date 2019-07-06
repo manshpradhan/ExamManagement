@@ -2,28 +2,39 @@
 
 @section('content')
 
-<form>
+<form action="/questions" method="POST">
+  @csrf
 <div class="form-group">
     <label>Enter your questions here</label>
     <input type="text" class="form-control" name="questions" placeholder="Enter Questions">
   </div>
+
   <div class="form-row">
     <div class="form-group col-md-6">
       <label>Option 1</label>
       <input type="text" class="form-control" name="ansFirst" placeholder="Enter Option 1">
     </div>
+
     <div class="form-group col-md-6">
       <label>Option 2</label>
       <input type="text" class="form-control" name="ansSecond" placeholder="Enter Option 2">
     </div>
+
   <div class="form-row">
     <div class="form-group col-md-6">
       <label>Option 3</label>
       <input type="text" class="form-control" name="ansThird" placeholder="Enter Option 3">
     </div>
+
     <div class="form-group col-md-6">
       <label>Option 4</label>
-      <input type="text" class="form-control" name="ansThird" placeholder="Enter Option 4">
+      <input type="text" class="form-control" name="ansFourth" placeholder="Enter Option 4">
+    </div>
+    
+  <div class="form-row">
+    <div class="col-md-4">
+      <label>Correct Answer</label>
+      <input type="text" class="form-control" name="ansCorrect" placeholder="Correct Answer">
     </div>
   </div>
   <div class="form-group">
@@ -34,6 +45,7 @@
       </label>
     </div>
   </div>
+
   <button type="submit" class="btn btn-primary">Add Questions</button>
 </form>
 

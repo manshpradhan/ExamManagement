@@ -15,12 +15,12 @@ class CreateQuestionsTable extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('questions');
-            $table->string('ansFirst');
-            $table->string('ansSecond');
-            $table->string('ansThird');
-            $table->string('ansFourth');
-            $table->string('ansCorrect');
+            $table->string('questions',250)->nullable();
+            $table->string('ansFirst',50)->default();
+            $table->string('ansSecond',50)->default();
+            $table->string('ansThird',50)->default();
+            $table->string('ansFourth',50)->default();
+            $table->string('ansCorrect')->default();
             $table->timestamps();
         });
     }

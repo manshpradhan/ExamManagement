@@ -36,7 +36,8 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $questions = Question::create();
+        return redirect('questions');
     }
 
     /**
