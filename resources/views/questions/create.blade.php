@@ -2,11 +2,11 @@
 
 @section('content')
 
-<form>
-
+<form action="/questions" method="POST">
+@csrf
   <div class="form-group">
-    <label for="inputQuestions">Enter your questions.</label>
-    <input type="text" class="form-control" name="inputQuestions" placeholder="Please enter your questions.">
+    <label for="questions">Enter your questions.</label>
+    <input type="text" class="form-control" name="questions" placeholder="Please enter your questions.">
   </div>
 
   <div class="form-row">
@@ -27,7 +27,7 @@
     </div>
     <div class="form-group col-md-6">
       <label for="optionFourth">Option 4</label>
-      <input type="text" class="form-control" name=optionFourth placeholder="Enter Option 4">
+      <input type="text" class="form-control" name="optionFourth" placeholder="Enter Option 4">
     </div>
   </div>
 
