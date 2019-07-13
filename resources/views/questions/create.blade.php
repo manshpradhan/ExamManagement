@@ -2,47 +2,39 @@
 
 @section('content')
 
-<form action="/questions" method="POST">
-  @csrf
-<div class="form-group">
-    <label>Enter your questions here</label>
-    <input type="text" class="form-control" name="questions" placeholder="Enter Questions">
-  </div>
+<form>
 
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label>Option 1</label>
-      <input type="text" class="form-control" name="ansFirst" placeholder="Enter Option 1">
-    </div>
-
-    <div class="form-group col-md-6">
-      <label>Option 2</label>
-      <input type="text" class="form-control" name="ansSecond" placeholder="Enter Option 2">
-    </div>
-
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label>Option 3</label>
-      <input type="text" class="form-control" name="ansThird" placeholder="Enter Option 3">
-    </div>
-
-    <div class="form-group col-md-6">
-      <label>Option 4</label>
-      <input type="text" class="form-control" name="ansFourth" placeholder="Enter Option 4">
-    </div>
-    
-  <div class="form-row">
-    <div class="col-md-4">
-      <label>Correct Answer</label>
-      <input type="text" class="form-control" name="ansCorrect" placeholder="Correct Answer">
-    </div>
-  </div>
   <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
+    <label for="inputQuestions">Enter your questions.</label>
+    <input type="text" class="form-control" name="inputQuestions" placeholder="Please enter your questions.">
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="optionFirst">Option 1</label>
+      <input type="text" class="form-control" name="optionFirst" placeholder="Enter Option 1">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="optionSecond">Option 2</label>
+      <input type="text" class="form-control" name="optionSecond" placeholder="Enter Option 2">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="optionThird">Option 3</label>
+      <input type="text" class="form-control" name="optionThird" placeholder="Enter Option 3">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="optionFourth">Option 4</label>
+      <input type="text" class="form-control" name=optionFourth placeholder="Enter Option 4">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="correctAnswer">Correct Answer</label>
+      <input type="text" class="form-control" name="correctAnswer" placeholder="Enter the correct Answers">
     </div>
   </div>
 
